@@ -1,0 +1,239 @@
+snippet figure
+alias fig
+abbr figure
+  \begin{figure}[t]
+    \centering
+    ${1}
+   \caption{ ${2} }
+    \label{fig:${3}}
+  \end{figure}
+  ${4}
+snippet includegraphics
+alias inc
+abbr includegraphics
+  \includegraphics[width=${1}\linewidth]{${2}}
+snippet subfigure
+alias \begin{subfigure}
+abbr subfigure
+  \begin{subfigure}{${1}\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{${2}}
+    \caption{ ${3} }
+    \label{fig:${4}}
+  \end{subfigure}
+  ${5}
+snippet wrapfigure
+alias \begin{wrapfigure}
+abbr wrapfigure
+  \begin{wrapfigure}{r}{ ${1} }
+    \centering
+    \includegraphics[width= ${2}\linewidth]{ ${3} }
+    \caption{ ${4} }
+    \label{fig:${5}}
+  \end{wrapfigure}
+  ${6}
+snippet table
+abbr table
+  \begin{table}[b]
+    \centering
+    \caption{ ${1} }
+    \label{tab:${2}}
+    \begin{tabular}{${3}}
+      ${4}
+    \end{tabular}
+  \end{table}
+  ${5}
+snippet subtable
+abbr subtable
+  \begin{subtable}
+    \centering
+    \caption{ ${1} }
+    \label{tab:${2}}
+    \begin{tabular}{${3}}
+      ${4}
+    \end{tabular}
+  \end{subtable}
+  ${5}
+snippet tikzpicture
+alias tikz
+abbr tikzpicture
+  \begin{tikzpicture}
+    \draw[gray](0,0) grid (10,4);
+    ${1}
+  \end{tikzpicture}
+  ${2}
+snippet itemize
+alias \itemize ite item 
+abbr itemize(.-*)
+  \begin{itemize}
+    \item ${1}
+  \end{itemize}
+  ${2}
+snippet enumerate
+alias \enumerate enum enu
+abbr enumerate(1,2,3)
+  \begin{enumerate}
+    \item ${1}
+  \end{enumerate}
+  ${2}
+snippet alignat
+alias \begin{alignat}
+abbr alignat
+  \begin{alignat}{${1:1}}
+    ${2}
+  \end{alignat}
+  ${3}
+snippet calc
+alias cal
+abbr  lcalc
+  \lcalc{\%${1}}{${2}} ${3}
+snippet tre
+alias \tre \tref tref
+abbr table-ref
+  \tabr \ref{tab:${1}} ${2}
+snippet fre
+alias \fre \fref fref
+abbr figure-ref
+  \figr\ref{fig:${1}} ${2}
+snippet ere
+alias \eref \ere eref
+abbr equation-ref
+  \eqr\eqref{eq:${1}} ${2}
+snippet ffref
+alias \ffref
+abbr ,~\ref
+  ,~\ref{fig:${1}} ${2}
+snippet ttref
+alias \ttref
+abbr ,~\ref
+  ,~\ref{tab:${1}} ${2}
+snippet eeref
+alias \eeref
+abbr ,~\eqref
+  ,~\eqref{eq:${1}} ${2}
+snippet blw
+alias \blw
+abbr \blw
+  \blw{ ${1} } ${2}
+snippet abv
+alias \abv
+abbr \abv
+  \abv{ ${1} } ${2}
+snippet frac
+alias \frac fra
+abbr \frac
+  \frac{ ${1} }{ ${2} } ${3}
+snippet cfrac
+alias \cfrac cfra 
+abbr \cfrac
+  \cfrac{ ${1} }{ ${2} } ${3}
+snippet si
+alias \si
+abbr \SI
+  \SI{ ${1} }{ ${2} } ${3}
+snippet unit
+alias ssi \ssi
+abbr \si
+  \si{ ${1} } ${2}
+snippet qty1
+alias \qty( \qtys
+abbr \qty(
+  \qty( ${1} ) ${2}
+snippet qty2
+alias \qty{ \qtym
+abbr \qty{
+  \qty{ ${1} } ${2}
+snippet qty3
+alias \qty[ \qtyl
+abbr \qty[
+  \qty[ ${1} ] ${2}
+snippet abs
+alias \abs
+abbr |*|
+  \abs{ ${1} } ${2} 
+snippet norm
+alias \norm
+abbr ||*||
+  \norm{ ${1} } ${2} 
+snippet evaluated
+alias \evaluated eval
+abbr |_^
+  \eval{ ${1} }_{ ${2} }^{ ${3} } ${4} 
+snippet Re
+alias \Re re
+abbr Re
+  \Re{ ${1} } ${2}
+snippet Im
+alias \Im im
+abbr Im
+  \Im{ ${1} } ${2}
+snippet expectationvalue
+alias \expectationvalue
+abbr <*>
+  \expval{ ${1} } ${2}
+snippet notag
+alias \notag not \not
+abbr notag
+  \notag \\\\
+  ${1}
+snippet luacode
+alias lua
+abbr luacode
+  \begin{luacode}
+    ${1}
+  \end{luacode}
+  ${2}
+snippet inlinemath
+alias math in i
+abbr $*$
+  $ ${1} $ ${2}
+snippet equation
+alias equ
+abbr equation
+  \begin{equation}
+    ${1}
+    \label{eq:${2}}
+  \end{equation}
+  ${3}
+snippet pdv
+alias \pdv 
+abbr pdv{{
+  \pdv{ ${1} }{ ${2} } ${3}
+snippet pdv-single
+abbr pdv{
+  \pdv{ ${1} } ${2}
+snippet dv
+alias \dv
+abbr dv{{
+  \dv{ ${1} }{ ${2} } ${3}
+snippet dv-single
+alias \dv-single
+abbr dv{
+  \dv{ ${1} } ${2}
+snippet int-indefinite
+abbr int
+  \int ${1} \dd{ ${2} } ${3}
+snippet int-definite
+abbr int_^
+  \int_{ ${1} }^{ ${2} } ${3} \dd{ ${4} } ${5}
+snippet sqrt
+alias \sqrt sqr
+abbr sqrt
+  \sqrt{ ${1} } ${2}
+snippet sum
+alias \sum Sigma \Sigma
+abbr sum^_ 
+  \sum_{ ${1} }^{ ${2} } ${3}
+snippet prod
+abbr prod_^
+alias \prod prod
+  \prod_{ ${1} }^{ ${2} } ${3}
+snippet overline
+alias over \overline \over 
+abbr overline
+  \overline{ ${1} } ${2}
+snippet underline
+alias under \underline \under 
+abbr underline
+  \underline{ ${1} } ${2}
+

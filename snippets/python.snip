@@ -1,0 +1,71 @@
+snippet import-sleep
+  from time import sleep
+snippet import-numpy
+alias np
+  import numpy as np
+snippet import-pandas
+alias pd
+  import pandas as pd
+snippet import-sympy
+alias np
+  import sympy as sp
+snippet import-mpl
+alias plt
+  import matplotlib.pyplot as plt
+snippet import-plotly
+alias go
+  import plotly.graph_objects as go
+snippet plotly.subplots
+  from plotly.subplots import make_subplots
+snippet make_subplots
+  make_subplots(rows=2,cols=1,subplot_titles=('${1}', '${2}'))
+  ${0}
+snippet import-curve_fit
+  from scipy.optimize import curve_fit
+snippet fitting
+alias fit
+  params, cov = curve_fit(linear_fit, x, y)
+  x=np.linspace(0,x.max(),1000)
+  y_fit = linear_fit(x,*params)
+snippet read_excel
+  ${1:df} = pd.read_excel('${2}.xlsx', skiprows=${3:1},sheet_name=${4:0})
+  ${0}
+snippet figure(plotly)
+alias fig
+  fig=go.Figure()
+snippet figurewidget
+  fig=go.FigureWidget() 
+snippet go.Scatter
+alias sca go.s
+  go.Scatter(x=${1},y=${2},name='${3}',mode='${4}'${5:#:marker_color}${6:#:marker_symbol},showlegend=${7:True})
+  ${0}
+snippet add_annotation
+alias ann
+  fig.add_annotation(go.layout.Annotation(x=${1},y=${2},text=${3},ax=${4:10},ay=${5:10}))
+snippet update_xaxes
+alias xax
+  fig.update_xaxes(title_text='${1}',zerolinecolor='lightgray'${2:#:rangemode}${3:#:type='log}')
+snippet update_yaxes
+alias yax
+  fig.update_yaxes(title_text='${1}',zerolinecolor='lightgray'${2:#:rangemode}${3:#:type='log}')
+snippet update_layout
+abbr layout(margin,font)
+  fig.update_layout(margin=dict(l=80,r=20,t=20,b=120),
+                    width=1200,
+                    font_size=16,
+                    legend_orientation='h')
+snippet write_image
+  fig.write_image('${1}.pdf')
+snippet for
+alias for 
+  for ${1:i} in ${2}:
+    ${0}
+snippet for-range
+  for ${1:i} in np.arange(${2},dtype=${3:None}):
+    ${0}
+snippet cell
+  # %%
+  ${0}
+snippet markdown-cell
+  # %% [markdown]
+  # ${0}

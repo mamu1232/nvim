@@ -1,0 +1,11 @@
+[[plugins]]
+repo= 'Shougo/dein.vim'
+
+[[plugins]] # カラースキーマ
+repo = 'w0ng/vim-hybrid'
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+if = '''!has('nvim')'''
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+if = '''!has('nvim')'''
