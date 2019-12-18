@@ -1,4 +1,6 @@
-let g:python3_host_prog = 'C:\Users\akira\AppData\Local\Programs\Python\Python37\python.exe'
+if has('win32') || has('win64')
+  let g:python3_host_prog = 'C:\Users\akira\AppData\Local\Programs\Python\Python37\python.exe'
+endif
 " 他のアプリとコピペ可能に
 set clipboard+=unnamed
 " 行番号表示
@@ -49,7 +51,7 @@ if &compatible
     set nocompatible
 endif
 " Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
