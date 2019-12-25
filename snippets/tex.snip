@@ -122,11 +122,11 @@ abbr \abv
 snippet frac
 alias \frac fra
 abbr \frac
-  \frac{ ${1} }{ ${2} } ${3}
+  \frac{ ${1} }{ ${2} } ${0}
 snippet cfrac
 alias \cfrac cfra 
 abbr \cfrac
-  \cfrac{ ${1} }{ ${2} } ${3}
+  \cfrac{ ${1} }{ ${2} } ${0}
 snippet si
 alias \si
 abbr \SI
@@ -136,15 +136,15 @@ alias ssi \ssi
 abbr \si
   \si{ ${1} } ${2}
 snippet qty1
-alias \qty( \qtys
+alias \qty( \qtys \qty1
 abbr \qty(
   \qty( ${1} ) ${2}
 snippet qty2
-alias \qty{ \qtym
+alias \qty{ \qtym \qty2
 abbr \qty{
   \qty{ ${1} } ${2}
 snippet qty3
-alias \qty[ \qtyl
+alias \qty[ \qtyl \qty3
 abbr \qty[
   \qty[ ${1} ] ${2}
 snippet abs
@@ -184,7 +184,7 @@ abbr luacode
   \end{luacode}
   ${2}
 snippet inlinemath
-alias math in i
+alias i
 abbr $*$
   $ ${1} $ ${2}
 snippet equation
@@ -195,8 +195,18 @@ abbr equation
     \label{eq:${2}}
   \end{equation}
   ${3}
+snippet cases
+  \begin{cases}
+    ${1}
+  \end{cases}
+  ${2}
+snippet dcases
+  \begin{dcases}
+    ${1}
+  \end{dcases}
+  ${2}
 snippet pdv
-alias \pdv 
+alias \pdv \pdv{
 abbr pdv{{
   \pdv{ ${1} }{ ${2} } ${3}
 snippet pdv-single
@@ -211,10 +221,10 @@ alias \dv-single
 abbr dv{
   \dv{ ${1} } ${2}
 snippet int-indefinite
-abbr int
+alias int \int \int-definite
   \int ${1} \dd{ ${2} } ${3}
 snippet int-definite
-abbr int_^
+alias int_^ \int_^ \int-definite
   \int_{ ${1} }^{ ${2} } ${3} \dd{ ${4} } ${5}
 snippet sqrt
 alias \sqrt sqr
@@ -222,7 +232,7 @@ abbr sqrt
   \sqrt{ ${1} } ${2}
 snippet sum
 alias \sum Sigma \Sigma
-abbr sum^_ 
+abbr sum_^
   \sum_{ ${1} }^{ ${2} } ${3}
 snippet prod
 abbr prod_^
@@ -236,4 +246,18 @@ snippet underline
 alias under \underline \under 
 abbr underline
   \underline{ ${1} } ${2}
-
+snippet xrightarrow
+alias xra \xrightarrow
+  \xrightarrow{ ${1} } ${2}
+snippet text
+alias \text \text{
+  \text{ ${1} } ${2}
+snippet sin
+alias \sin \sin(
+  sin( ${1} ) ${2}
+snippet cos
+alias \cos \cos(
+  cos( ${1} ) ${2}
+snippet exp
+alias \exp \exp(
+  \exp( ${1} ) ${2}

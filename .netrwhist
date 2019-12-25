@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='C:/Users/akira/Documents/expert/3-2nd/experiment/12-6-data-connection'
+let g:netrw_dirhist_9='/mnt/c'
+let g:netrw_dirhist_8='/mnt/c/Users'
+let g:netrw_dirhist_7='/mnt/c/Users/akira'
+let g:netrw_dirhist_6='/mnt/c/Users/akira/.cache'
+let g:netrw_dirhist_5='/mnt/c/Users/akira/.cache/dein'
+let g:netrw_dirhist_4='/mnt/c/Users/akira/.cache/dein/repos'
+let g:netrw_dirhist_3='/mnt/c/Users/akira/.cache/dein/repos/github.com'
+let g:netrw_dirhist_2='/mnt/c/Users/akira/.cache/dein/repos/github.com/Shougo'
+let g:netrw_dirhist_1='/mnt/c/Users/akira/.cache/dein/repos/github.com/Shougo/dein.vim'

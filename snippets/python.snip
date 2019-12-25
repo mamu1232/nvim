@@ -19,7 +19,6 @@ snippet plotly.subplots
   from plotly.subplots import make_subplots
 snippet make_subplots
   make_subplots(rows=2,cols=1,subplot_titles=('${1}', '${2}'))
-  ${0}
 snippet import-curve_fit
   from scipy.optimize import curve_fit
 snippet fitting
@@ -29,15 +28,14 @@ alias fit
   y_fit = linear_fit(x,*params)
 snippet read_excel
   ${1:df} = pd.read_excel('${2}.xlsx', skiprows=${3:1},sheet_name=${4:0})
-  ${0}
 snippet figure(plotly)
 alias fig
-  fig=go.Figure()
+  fig=go.Figure( ${1} )
 snippet figurewidget
-  fig=go.FigureWidget() 
+  fig=go.FigureWidget( ${2} ) 
 snippet go.Scatter
 alias sca go.s
-  go.Scatter(x=${1},y=${2},name='${3}',mode='${4}'${5:#:marker_color}${6:#:marker_symbol},showlegend=${7:True})
+  go.Scatter(x=${1},y=${2},name='${3}',mode='${4}'${5:#:,marker_color}${6:#:,marker_symbol},showlegend=${7:True})
   ${0}
 snippet add_annotation
 alias ann

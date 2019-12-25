@@ -1,6 +1,7 @@
 if has('win32') || has('win64')
-  let g:python3_host_prog = 'C:\Users\akira\AppData\Local\Programs\Python\Python37\python.exe'
+  let g:python3_host_prog = 'C:\Python37\python.exe'
 endif
+set nocompatible
 " 他のアプリとコピペ可能に
 set clipboard+=unnamed
 " 行番号表示
@@ -69,13 +70,9 @@ syntax enable
 colorscheme hybrid
 
 "" キーマップ変更
-inoremap <C-z> <Esc>A
-inoremap <C-a> <Esc>I
+inoremap <C-a> <Esc>A
+inoremap <C-i> <Esc>I
 nnoremap <CR> i<Enter><Esc>
-inoremap <C-h> <Left>
-" inoremap <C-j> <Down>
-" inoremap <C-k> <Up>
-inoremap <C-l> <Right>
 inoremap <C-v> <C-r>*
 nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
