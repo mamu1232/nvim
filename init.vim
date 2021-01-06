@@ -71,7 +71,7 @@ colorscheme hybrid
 
 "" キーマップ変更
 inoremap <C-a> <Esc>A
-inoremap <C-i> <Esc>I
+"inoremap <C-i> <Esc>I
 nnoremap <CR> i<Enter><Esc>
 inoremap <C-v> <C-r>*
 nnoremap <C-j> :bn<CR>
