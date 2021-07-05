@@ -61,7 +61,7 @@ endif
 " begin settings {{{
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
-  let s:rc_dir = expand('~/nvim')
+  let s:rc_dir = expand('~/.cache/nvim')
   if !isdirectory(s:rc_dir)
     call mkdir(s:rc_dir, 'p')
   endif
